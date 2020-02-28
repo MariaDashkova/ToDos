@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do List</title>
+        <link  rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+<main>
+  <div class="container">
+    <h1>todo</h1>
+    <h2>Добавить ваше todo</h2>
+    <p>Вы можете выполнить/оставить в прогрессе/удалить карточку</p>
+
+    <button onclick="show()">Добавить</button>
+    <button onclick="hide()">Закрыть</button>
+    
+    <select id="select" onchange="doFilter(this)">
+      <option value="all">All</option>
+      <option value="checked">Done</option>
+      <option value="inProgress">In Progress</option>
+    </select>
+
+    <form id="forma" class="js-form" style="display: none;">
+      <input autofocus type="text"  placeholder="название" class="js-todo-input">
+    </form>
+
+    <ul class="todo-list js-todo-list"></ul>
+    
+    
+  </div>
+</main>
+
+<svg>
+  <defs>
+        
+    <symbol id="delete-icon" viewBox="0 0 448 448"><path d="m224 0c-123.710938 0-224 100.289062-224 224s100.289062 224 224 224 224-100.289062 224-224c-.132812-123.65625-100.34375-223.867188-224-224zm124.449219 325.824219c4.15625 4.015625 5.828125 9.964843 4.363281 15.558593s-5.835938 9.964844-11.429688 11.429688-11.542968-.207031-15.558593-4.363281l-101.824219-101.824219-101.824219 101.824219c-6.277343 6.0625-16.257812 5.976562-22.429687-.195313s-6.257813-16.152344-.195313-22.429687l101.824219-101.824219-101.824219-101.824219c-4.15625-4.015625-5.828125-9.964843-4.363281-15.558593s5.835938-9.964844 11.429688-11.429688 11.542968.207031 15.558593 4.363281l101.824219 101.824219 101.824219-101.824219c6.277343-6.0625 16.257812-5.976562 22.429687.195313s6.257813 16.152344.195313 22.429687l-101.824219 101.824219zm0 0" fill="#D80027"/></symbol>
+  </defs>
+</svg>
+       
+        <script src="todo.js"></script>
+    </body>
+</html>
